@@ -101,5 +101,5 @@ ENV/
 .mypy_cache/
 
 # Annoying Mac File
-.DC_Store
+.DS_Store
 
