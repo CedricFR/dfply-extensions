@@ -4,6 +4,10 @@ import numpy as np
 
 import plotly.offline as offline
 from plotly.graph_objs import Scatter, Annotation, Heatmap, Trace, Bar
+import cufflinks as cf
+
+#offline.init_notebook_mode()
+cf.set_config_file(offline=True, offline_show_link=False, world_readable=False)
 
 def _solve_intention(obj, df):
     if isinstance(obj, dict):
@@ -12,6 +16,12 @@ def _solve_intention(obj, df):
         return obj.evaluate(df).tolist()
     else:
         return obj
+
+_which = lambda lst:list(np.where(lst)[0])
+
+@dfpipe
+def iplot(df, *args, **kwargs):
+    return df.iplot(*args, **kwargs)
 
 @pipe
 def plot_ly(df):
@@ -31,7 +41,6 @@ def _add_scatter(df, *args, **kwargs):
     df.plotly['data'].append(Scatter(*args, **kwargs))
     return df
 
-_which = lambda lst:list(np.where(lst)[0])
 
 @pipe
 def add_scatter(df, *args, **kwargs):
