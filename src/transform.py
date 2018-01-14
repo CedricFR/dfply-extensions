@@ -2,7 +2,7 @@ from dfply import *
 
 @pipe
 def narep(df, val=0):
-    df.fillna(val)
+    df = df.fillna(val)
     return df
 
 @dfpipe

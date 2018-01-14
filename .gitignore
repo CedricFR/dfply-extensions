@@ -103,3 +103,5 @@ ENV/
 # Annoying Mac File
 .DS_Store
 
+# Vim temp files
+*.swp
