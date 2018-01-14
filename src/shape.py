@@ -8,3 +8,6 @@ def nrow(df):
 def ncol(df):
     return df.shape[1]
 
+@pipe
+def colnames(df):
+    return df.columns.tolist()
