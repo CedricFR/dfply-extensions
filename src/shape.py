@@ -11,3 +11,7 @@ def ncol(df):
 @pipe
 def colnames(df):
     return df.columns.tolist()
+
+@pipe
+def summary(df):
+    return df.describe(include='all').transpose().fillna("")
