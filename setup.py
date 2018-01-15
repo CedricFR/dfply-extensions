@@ -7,7 +7,7 @@ setup(
     keywords = 'pandas dplyr plotly',
     packages = find_packages(),
     include_package_data=True,
-    package_dir={'dfply_extensions':'src'},
+    package_dir={'src':'dfply_extensions'},
     install_requires=['numpy', 'pandas', 'dfply'],
     description = 'additional functions for dfply',
     long_description = 'See https://github.com/cedricfr/dfply-extensions/blob/master/README.md for details.',
