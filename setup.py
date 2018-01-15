@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name = 'dfply-extensions',
+    name = 'dfply_extensions',
     version = '0.0.1',
     author = 'Cedric Canovas',
     keywords = 'pandas dplyr plotly',
