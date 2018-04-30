@@ -6,8 +6,9 @@ import plotly.offline as offline
 from plotly.graph_objs import Scatter, Annotation, Heatmap, Trace, Bar
 import cufflinks as cf
 
-#offline.init_notebook_mode()
-cf.set_config_file(offline=True, offline_show_link=False, world_readable=False)
+def init():
+    #offline.init_notebook_mode()
+    cf.set_config_file(offline=True, offline_show_link=False, world_readable=False)
 
 def _solve_intention(obj, df):
     if isinstance(obj, dict):
